@@ -1,0 +1,51 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Personal job history, notes, backups and archives
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.refresh.lock
+/backups/
+/notes/
+/reports/
+/data/
+/context.md
+/PROJECT_PLAN.md
+/.agents/
+*.zip
+# Python environments, caches and build outputs
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+/build/
+/dist/
+*.egg-info/
+# Frontend dependencies, generated files and private deployment metadata
+node_modules/
+.next/
+.vinext/
+.wrangler/
+.openai/
+.vercel/
+*.tsbuildinfo
+# Logs and local workspace output
+*.log
+.DS_Store
+/work/
+/outputs/
+
+# Private presentation preferences (never bundled or published)
+/.local/

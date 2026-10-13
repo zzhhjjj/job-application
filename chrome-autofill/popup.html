@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Autofill</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">LOCAL ONLY</p>
+        <h1>求职表单自动填充</h1>
+        <p id="intro-copy">输入后立即保存在本机 Chrome，不会自动提交。</p>
+      </header>
+
+      <form id="profile-form">
+        <div class="two-columns">
+          <label>First name<input name="firstName" autocomplete="given-name" /></label>
+          <label>Last name<input name="lastName" autocomplete="family-name" /></label>
+        </div>
+        <label>Email<input name="email" type="email" autocomplete="email" /></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" /></label>
+        <label>LinkedIn<input name="linkedin" type="url" placeholder="https://linkedin.com/in/..." /></label>
+        <label>GitHub<input name="github" type="url" placeholder="https://github.com/..." /></label>
+        <label>Personal website<input name="website" type="url" /></label>
+        <div class="two-columns">
+          <label>City<input name="city" autocomplete="address-level2" /></label>
+          <label>State<input name="state" autocomplete="address-level1" /></label>
+        </div>
+        <label>Location shown on applications<input name="location" placeholder="San Francisco, CA" /></label>
+        <label>Country<input name="country" autocomplete="country-name" /></label>
+        <label class="checkbox"><input name="overwrite" type="checkbox" />覆盖已有内容</label>
+
+        <div class="actions" id="popup-actions">
+          <button type="button" class="secondary" id="open-profile-window">在独立窗口编辑</button>
+          <button type="button" id="save-and-fill">保存并填充当前页</button>
+        </div>
+        <p id="status" role="status">资料会自动保存。</p>
+      </form>
+      <footer>快捷键：Alt + Shift + F</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

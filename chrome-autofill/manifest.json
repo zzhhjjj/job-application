@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Job Application Autofill",
+  "version": "0.2.0",
+  "description": "Fill common job-application fields from a profile stored locally in Chrome.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "Job Application Autofill",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "fill-current-page": {
+      "suggested_key": {
+        "default": "Alt+Shift+F",
+        "mac": "Alt+Shift+F"
+      },
+      "description": "Fill the current job application"
+    }
+  }
+}
